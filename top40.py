@@ -10,10 +10,10 @@ def main():
     json = rss_yank.get_rss_json(rss_address)
     # parse out the artists i guess?
     artists = extract_artists(json)
+    # TODO deduplicate artists
     import pdb; pdb.set_trace()
 
 def extract_artists(rss_json):
-    # doo doo
     feed = rss_json['feed']
     songs = feed['entry']
 
